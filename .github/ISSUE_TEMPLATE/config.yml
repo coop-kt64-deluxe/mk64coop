@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Mario Kart 64 Recompiled itself (the game, not the online mod)
+    url: https://github.com/sonicdcer/MarioKart64Recomp/issues
+    about: A problem that also happens without MK64 Coop Deluxe installed belongs to the game's own project.
+  - name: The game build the mod needs (Mario Kart 64 Recompiled 0.9.6, pull request 38)
+    url: https://github.com/sonicdcer/MarioKart64Recomp/pull/38
+    about: Its builds are on the pull request's Checks tab. MK64 Coop Deluxe itself is on this repository's Releases page.
