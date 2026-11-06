@@ -1,0 +1,32 @@
+name: Feature request
+description: An idea for the launcher, the server or online play.
+title: "[Idea] "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: The idea
+      description: What you would like, and what it would let you do.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: For
+      options:
+        - Playing (races, battles, items, the lobby in the game)
+        - The launcher
+        - Hosting a server
+        - Something else
+    validations:
+      required: true
+
+  - type: textarea
+    id: now
+    attributes:
+      label: How you do it today
+      description: A workaround you use, or why there is none.
+    validations:
+      required: false
