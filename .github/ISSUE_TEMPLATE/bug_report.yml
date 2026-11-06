@@ -1,0 +1,124 @@
+name: Bug report
+description: Something in the launcher, the server or the game mod does not work as it should.
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting. For a game that does not connect or a lobby you cannot join, the **Connection problem** form asks better questions.
+        Please do not attach your ROM or any game files. Look through a log before you paste it: it can show your server address and player names.
+
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: Click the version at the bottom of the launcher's sidebar; it copies something like `MK64 Coop Deluxe vX.Y.Z (abc1234)`.
+      placeholder: MK64 Coop Deluxe vX.Y.Z (abc1234)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Where it happens
+      options:
+        - The game (lobby panel, race, battle, items, karts)
+        - The launcher (a page, a button, the tray)
+        - The server (hosting, the leaderboard, mk64coop serve)
+        - Installing the mod or adding the ROM
+        - Something else
+    validations:
+      required: true
+
+  - type: dropdown
+    id: mode
+    attributes:
+      label: Match
+      description: If it happened in a match.
+      options:
+        - Not in a match
+        - Race
+        - Balloon battle
+    validations:
+      required: false
+
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What you did, what you expected, and what happened instead. Screenshots or a short video help a lot.
+      placeholder: |
+        1. Hosted a battle lobby on Block Fort with 10 karts (3 PCs, 4 CPU karts)
+        2. ...
+        Expected: ...
+        Instead: ...
+    validations:
+      required: true
+
+  - type: input
+    id: course
+    attributes:
+      label: Course or battle arena
+      placeholder: Luigi Raceway, Block Fort, ...
+    validations:
+      required: false
+
+  - type: textarea
+    id: players
+    attributes:
+      label: Players
+      description: How many PCs, how many players on each (split screen), how many CPU karts, and whether you were the host.
+      placeholder: 3 PCs; mine had 2 players in split screen; 4 CPU karts; I was the host
+    validations:
+      required: false
+
+  - type: dropdown
+    id: always
+    attributes:
+      label: How often
+      options:
+        - Every time
+        - Sometimes
+        - Once so far
+    validations:
+      required: true
+
+  - type: textarea
+    id: game-log
+    attributes:
+      label: Game log
+      description: Launcher, Play or Status page, **Game log**, **Copy**, then paste here (the end of it is usually enough). For a crash it holds the details.
+      render: text
+    validations:
+      required: false
+
+  - type: textarea
+    id: server-log
+    attributes:
+      label: Server log (if you were hosting)
+      description: Launcher, Live page, the server's log.
+      render: text
+    validations:
+      required: false
+
+  - type: input
+    id: system
+    attributes:
+      label: System
+      description: Windows version, and the GPU if it is a drawing problem.
+      placeholder: Windows 11 24H2, RTX 3060
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before posting
+      options:
+        - label: The game is Mario Kart 64 Recompiled 0.9.6, the pull request 38 build (the mod does not load on 0.9.2).
+          required: true
+        - label: Every PC in the match runs the same MK64 Coop Deluxe version.
+          required: false
+        - label: I looked through the logs for anything I do not want to share.
+          required: true
