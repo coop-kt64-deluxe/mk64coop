@@ -5,7 +5,7 @@
 [Download](../../releases/latest) · [Report a bug](../../issues/new/choose)
 
 MK64 Coop Deluxe lets players on different PCs race and battle together in
-[Mario Kart 64: Recompiled](https://github.com/sonicdcer/MarioKart64Recomp), the PC port of Mario Kart 64. A Windows launcher picks or hosts a
+[Mario Kart 64: Recompiled](https://github.com/sonicdcer/MarioKart64Recomp), the PC port of Mario Kart 64. A launcher for Windows, macOS and Linux picks or hosts a
 server and starts the game; a mod draws a lobby inside the game and keeps every kart in step. Each PC brings one kart full screen, or two to
 four in split screen, and CPU karts fill the empty seats.
 
@@ -14,23 +14,27 @@ four in split screen, and CPU karts fill the empty seats.
 
 ## Download
 
-Get the latest from **[Releases](../../releases/latest)**.
+Get the latest from **[Releases](../../releases/latest)** and pick the file for your system.
 
-| File | For |
+| System | File |
 |---|---|
-| `mk64coop-<version>-win-x64.zip` | players and hosts: the launcher, the server and the game mod |
+| Windows 10 or 11 (x64) | `Mk64CoopLauncher-<version>-win-x64.exe` |
+| macOS (Apple silicon and Intel) | `mk64coop-<version>-osx-universal.dmg`, or `mk64coop-<version>-osx-universal.app.zip` |
+| Linux (x64) | `mk64coop-<version>-linux-x64.AppImage`, `.deb` or `.rpm` |
 
-Unzip it anywhere; nothing is installed, and deleting the folder removes it. Its `README.txt` has the same setup steps as below.
+The launcher is one file with the server and the game mod inside. **Windows:** run it from anywhere. **macOS:** drag *MK64 Coop Deluxe* to
+Applications; the app is not notarized, so the first time open it with System Settings → Privacy & Security → *Open Anyway*. **Linux:**
+`sudo apt install ./mk64coop-<version>-linux-x64.deb` or `sudo dnf install ./mk64coop-<version>-linux-x64.rpm`, or make the AppImage executable
+(`chmod +x`) and run it. None of the files are code-signed, so Windows SmartScreen or macOS may ask you to confirm.
 
 **You also need:**
 
-1. **Mario Kart 64: Recompiled 0.9.6, the build of [pull request #38](https://github.com/sonicdcer/MarioKart64Recomp/pull/38)** ("Multiplayer +
-   New Frontend"). It is a separate project (GPL-3.0). The mod needs 0.9.6 and does not load on the official 0.9.2 release. The pull request's
-   builds are on its Checks tab (GitHub Actions artifacts, Windows: `MarioKart64Recompiled-Windows-RelWithDebInfo`; a GitHub account is needed
-   to download them).
+1. **The game: [Mario Kart 64: Recompiled, from the mariomariokt64 fork](https://github.com/mariomariokt64/MarioKart64Recomp/releases/latest)** (Windows zip, macOS zip for Intel and Apple silicon,
+   Linux AppImage or tar.gz for x64 and arm64). It is a separate project (GPL-3.0, by sonicdcer and the N64Recomp team); the fork builds its
+   multiplayer branch with the Keyboard Players option, which split screen online uses. The official 0.9.2 release does not load the mod.
 2. **Your own copy of the US Mario Kart 64 ROM** (`.z64`, `.v64` or `.n64`). Nothing of the game is distributed here, and your ROM never
    leaves your PC.
-3. **Windows 10 or 11.** Nothing else to install: no .NET, no Visual C++ redistributable.
+3. **Windows 10 or 11 (x64), macOS (Apple silicon or Intel), or Linux (x64).** Nothing else to install.
 
 ## What works
 
@@ -76,8 +80,8 @@ an HTTPS reverse proxy.
 
 ## FAQ
 
-**The game says the mod needs another version.** The mod needs Mario Kart 64: Recompiled 0.9.6, the pull request #38 build. The official
-0.9.2 release does not load it.
+**The game says the mod needs another version.** Use the game build from the [releases of the mariomariokt64 fork](https://github.com/mariomariokt64/MarioKart64Recomp/releases/latest). The official
+0.9.2 release does not load the mod.
 
 **The game starts but never connects.** Check the server on the Play page first (the dot turns green when it answers). Then open **Game
 log** (Play or Status page): it says what the mod tried. A private server needs its join code; a server on another PC needs **Allow players
