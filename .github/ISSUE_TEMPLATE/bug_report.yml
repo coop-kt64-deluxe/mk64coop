@@ -116,7 +116,7 @@ body:
     attributes:
       label: Before posting
       options:
-        - label: The game is Mario Kart 64 Recompiled 0.9.6, the pull request 38 build (the mod does not load on 0.9.2).
+        - label: The game is a build from the mariomariokt64 fork's releases (the mod does not load on the official 0.9.2).
           required: true
         - label: Every PC in the match runs the same MK64 Coop Deluxe version.
           required: false
